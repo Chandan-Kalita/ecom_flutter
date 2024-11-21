@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:ecom_flutter/counter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,14 +12,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Row(
-            children: [
-              BackButton(onPressed: () {
-                Navigator.pop(context);
-                print("object");
-              })
-            ],
+        body: SafeArea(
+          child: Container(
+            child: Counter(),
           ),
         ),
       ),
